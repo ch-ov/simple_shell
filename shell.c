@@ -7,11 +7,11 @@ void shell()
 		get_cmd();
 
 		/* bypass empty commands*/
-		if (!strcmp("", *cmd))
+		if (!_strcmp("", *cmd))
 			continue;
 
 		/* check for "exit" command*/
-		if (!strcmp("exit", *cmd))
+		if (!_strcmp("exit", *cmd))
 			break;
 
 		/* fit the command into *argv[]*/
