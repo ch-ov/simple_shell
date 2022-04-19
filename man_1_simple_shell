@@ -1,0 +1,48 @@
+.TH shell "18 April 2022" "ver. 1.0" "shell man page"
+
+.SH NAME
+.B Shell
+
+.SH SYNOPSIS
+.PP
+.B shell [options]
+
+.PP
+.B 
+.SH DESCRIPTION
+The shell is a program that reads lines of text, interprets them, and if commands exist, executes them; the program serves as an interface to the user when manipulating an operating system.
+ 
+The shell considers the first word of a command line (up to the first blank space) to be the first command and all subsequent words to be arguments.
+
+When the system starts, it will locate the name of a shell program to execute. After executing, the shell displays a command prompt. This prompt is usually a $ (dollar sign). When you type a command, shell will evaluate the command: the first command is usually the name of the program followed by the arguments, if shell finds arguments it will try to execute them. Depending on the command's instructions, shell will either record the output of the command on the screen or direct you to the output. It then restores the command prompt to type another command.
+
+Shell has two built-in commands that also integrate with other commands that can be located in the PATH. The shell output is exactly like the original shell.
+
+.SH USE
+To use the Shell the user needs to compile the program using the following command
+.PP
+.B gcc -Wall -Wextra -Werror -pedantic *.c -o hsh
+
+.B
+.PP
+.SH BUILT-INS
+.PP
+There are two builtins in the shell.
+.PP
+.B env - 
+.PP
+Instructs the program to display all environment variables with their values.
+.PP
+.B exit - 
+.PP
+To exit the shell the user can use the exit command. 
+The program exits with status 0.
+.PP
+.SH SEE ALSO
+man sh
+
+.SH BUGS
+unknown bugs
+
+.SH AUTHORS
+.B Johanna Rodriguez, Christian Oviedo
