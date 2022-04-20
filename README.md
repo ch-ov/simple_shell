@@ -3,7 +3,7 @@
 ![Flowchart](Flowchart_shell.png)
 ## _Installation and compilation_
 **1.** Open the terminal\
-**2.** git clone https://github.com/ch-ov/simple_shell\
+**2.** git clone https://github.com/ch-ov/simple_shell \
 **3.** cd simple_shell\
 **4.** gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh\
 ## _Usage_
