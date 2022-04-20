@@ -1,5 +1,5 @@
 #include "main.h"
-int _env()
+int env()
 {
 	char **s = environ;
 
