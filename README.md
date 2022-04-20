@@ -6,7 +6,6 @@
 #### 2. git clone https://github.com/ch-ov/simple_shell
 #### 3. cd simple_shell
 #### 4. gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
-#### 5. ./hsh
 ## Usage
 #### In interactive mode:
 ```C
