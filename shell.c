@@ -1,39 +1,38 @@
 #include "main.h"
-void shell()
+/**
+ * shell - Start the shell
+ */
+void shell(void)
 {
+	char cmd[MAX_SIZE_CMD];
+	char *argv[MAX_SIZE_ARG];
+	pid_t pid;
+	int i;
+
 	while (1)
 	{
-		/* get the command from user*/
-		get_cmd();
+		get_cmd(); /* get the command from user*/
 
-		/* bypass empty commands*/
-		if (!_strcmp("", *cmd))
+		if (!_strcmp("", *cmd)) /* bypass empty commands*/
 			continue;
 
-		/* check for "exit" command*/
-		if (!_strcmp("exit", *cmd))
+		if (!_strcmp("exit", *cmd)) /* check for "exit" command*/
 			break;
 
-		/* fit the command into *argv[]*/
-		convert_cmd();
+		convert_cmd(); /* fit the command into *argv[]*/
 
-		/* fork and execute the command*/
-		pid = fork();
-		if (-1 == pid)
+		pid = fork(); /* fork and execute the command*/
+		if (pid == -1)
 		{
 			printf("failed to create a child\n");
 		}
-		else if (0 == pid)
+		else if (pid == 0)
 		{
-			/* printf("hello from child\n");*/
-			/* execute a command*/
-			execvp(argv[0], argv);
+			execvp(argv[0], argv); /* execute a command*/
 		}
 		else
 		{
-			/* printf("hello from parent\n");*/
-			/* wait for the command to finish if "&" is not present*/
-			if (NULL == argv[i])
+			if (argv[i] == NULL) /* wait for command finish if & not present*/
 				waitpid(pid, NULL, 0);
 		}
 	}

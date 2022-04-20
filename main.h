@@ -11,18 +11,23 @@
 
 #define MAX_SIZE_CMD 256
 #define MAX_SIZE_ARG 16
-extern char **environ;
-
-char *cmd[MAX_SIZE_CMD];	  /*string holder for the command*/
-char *argv[MAX_SIZE_ARG]; /* an array for command and arguments*/
-pid_t pid;				  /* global variable for the child process ID*/
-int i;					  /* global for loop counter*/
-
-void get_cmd();		/* get command string from the user*/
-void convert_cmd(); /* convert the command string to the required format by execvp()*/
-void shell();		/* to start the shell*/
-void log_handle();
-int env();
+/**
+ * get_cmd - Get the cmd object
+ */
+void get_cmd(void);	/* get command string from the user*/
+/**
+ * convert_cmd - Tokenize and compare cmd
+ */
+void convert_cmd(void); /* convert the command string to the required format*/
+/**
+ * shell - Start the shell
+ */
+void shell(void);
+/**
+ * env - Prints the current environment
+ * Return: int
+ */
+int env(void);
 
 /*functions str*/
 int _strlen(char *s);

@@ -1,10 +1,14 @@
 #include "main.h"
-void get_cmd()
+/**
+ * get_cmd - Get the cmd object
+ */
+void get_cmd(void)
 {
-    /* get command from user*/
-    printf("shell$\t");
-    getline(*cmd, MAX_SIZE_CMD, stdin);
-    /* remove trailing newline*/
-    if ((_strlen(*cmd) > 0) && (*cmd[_strlen(*cmd) - 1] == '\n'))
-        cmd[_strlen(*cmd) - 1] = '\0';
+	char *cmd[MAX_SIZE_CMD];  /*string holder for the command*/
+
+	printf("shell$\t");
+	getline(*cmd, MAX_SIZE_CMD, stdin); /* get command from user*/
+
+	if ((_strlen(*cmd) > 0) && (*cmd[_strlen(*cmd) - 1] == '\n')) /* remove \n*/
+		cmd[_strlen(*cmd) - 1] = '\0';
 }

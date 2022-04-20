@@ -5,8 +5,7 @@
  */
 int main(void)
 {
-	/* start the shell*/
-	shell();
+	shell();/* start the shell*/
 
 	return (0);
 }

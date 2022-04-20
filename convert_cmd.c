@@ -1,10 +1,17 @@
 #include "main.h"
-void convert_cmd()
+/**
+ * convert_cmd - Tokenize and compare cmd
+ */
+void convert_cmd(void)
 {
+	char cmd[MAX_SIZE_CMD];
+	char *argv[MAX_SIZE_ARG];
 	/* split string into argv*/
 	char *ptr;
-	i = 0;
+	int i = 0;
+
 	ptr = strtok(*cmd, " ");
+
 	while (ptr != NULL)
 	{
 		/* printf("%s\n", ptr);*/
@@ -23,5 +30,4 @@ void convert_cmd()
 	{
 		argv[i] = NULL;
 	}
-	/* printf("%d\n", i);*/
 }

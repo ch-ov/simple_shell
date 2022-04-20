@@ -1,6 +1,11 @@
 #include "main.h"
-int env()
+/**
+ * env - Prints the current environment
+ * Return: int
+ */
+int env(void)
 {
+	char **environ;
 	char **s = environ;
 
 	for (; *s; s++)
@@ -8,5 +13,5 @@ int env()
 		printf("%s\n", *s);
 	}
 
-	return 0;
+	return (0);
 }
