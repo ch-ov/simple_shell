@@ -11,6 +11,7 @@
 
 #define MAX_SIZE_CMD 256
 #define MAX_SIZE_ARG 16
+extern char **environ;
 
 char *cmd[MAX_SIZE_CMD];	  /*string holder for the command*/
 char *argv[MAX_SIZE_ARG]; /* an array for command and arguments*/
