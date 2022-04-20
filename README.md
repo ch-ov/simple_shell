@@ -1,2 +1,4 @@
-# 0x16. C - Simple Shell
+# _0x16. C - Simple Shell_
+---
 ![Flowchart](Flowchart_shell.png)
+---
