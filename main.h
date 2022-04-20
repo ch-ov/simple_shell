@@ -22,6 +22,7 @@ void get_cmd();		/* get command string from the user*/
 void convert_cmd(); /* convert the command string to the required format by execvp()*/
 void shell();		/* to start the shell*/
 void log_handle();
+int env();
 
 /*functions str*/
 int _strlen(char *s);

@@ -1,8 +1,12 @@
 #include "main.h"
-int main()
+/**
+ * main - Entry point
+ * Return: int
+ */
+int main(void)
 {
 	/* start the shell*/
 	shell();
 
-	return 0;
+	return (0);
 }
