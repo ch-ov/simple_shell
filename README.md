@@ -7,4 +7,14 @@
 3. cd simple_shell
 4. gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 5. ./hsh
+## Usage
+#### In interactive mode:
+```C
+$ ./hsh
+shell$ /bin/ls
+hsh main.c shell.c
+shell$
+shell$ exit
+$
+```
 
