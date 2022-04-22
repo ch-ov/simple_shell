@@ -4,8 +4,8 @@
  */
 void get_cmd(void)
 {
-	char *cmd = NULL;
-	size_t size;  /*string holder for the command*/
+	char *cmd = NULL; /*string holder for the command*/
+	size_t size;
 
 	printf("shell$\t");
 	getline(&cmd, &size, stdin); /* get command from user*/
