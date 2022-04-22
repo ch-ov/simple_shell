@@ -10,7 +10,7 @@ void convert_cmd(void)
 	char *ptr;
 	int i = 0;
 
-	ptr = strtok(*cmd, " ");
+	ptr = strtok(cmd, " ");
 
 	while (ptr != NULL)
 	{

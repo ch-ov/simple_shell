@@ -7,16 +7,16 @@ void shell(void)
 	char cmd[MAX_SIZE_CMD];
 	char *argv[MAX_SIZE_ARG];
 	pid_t pid;
-	int i;
+	int i = 0;
 
 	while (1)
 	{
 		get_cmd(); /* get the command from user*/
 
-		if (!_strcmp("", *cmd)) /* bypass empty commands*/
+		if (!_strcmp("", cmd)) /* bypass empty commands*/
 			continue;
 
-		if (!_strcmp("exit", *cmd)) /* check for "exit" command*/
+		if (!_strcmp("exit", cmd)) /* check for "exit" command*/
 			break;
 
 		convert_cmd(); /* fit the command into *argv[]*/
